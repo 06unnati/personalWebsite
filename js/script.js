@@ -49,22 +49,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    // ---------- Contact Form ----------
-    const form = document.getElementById('contact-form');
-    if (form) {
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const button = form.querySelector('button[type="submit"]');
-            const originalText = button.textContent;
-
-            button.textContent = 'Message Sent!';
-            button.disabled = true;
-
-            setTimeout(() => {
-                form.reset();
-                button.textContent = originalText;
-                button.disabled = false;
-            }, 2200);
+    // ---------- Contact Form (Formspree) ----------
+    if (window.formspree) {
+        window.formspree('initForm', {
+            formElement: '#contact-form',
+            formId: 'xgogdeqn'
         });
     }
 });

@@ -59,7 +59,7 @@
                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="M3 6.5l9 6.5 9-6.5"/></svg>
                               </a>
 
-                              <a target="_blank" href="https://www.linkedin.com/in/unnatigoyal/" aria-label="LinkedIn" class="icon-link">
+                              <a target="_blank" href="https://www.linkedin.com/in/unnati-goyal2006/" aria-label="LinkedIn" class="icon-link">
                                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
                               </a>
 
@@ -72,7 +72,7 @@
                     <div class="about-text">
                          <p>I am a student in UCSD's class of 2028, pursuing a major in Computer Science and a minor in Business Economics. I have been studying computer science since middle school, and am comfortable coding in Java, Python, C, HTML, CSS, Javascript, React, and Typescript. When I'm not in classes, I'm often doing research in ML with the Scripps Institute of Oceanography or software development as part of the IT Department at UCSD. I've also done software engineering, AI, and machine learning internships with DreamDor LLC, Runway Avenue, and LaNova AI. I am also currently leading as the President of the Computer Science Engineering Society (CSES) - one of the oldest CS student organizations at UCSD.</p>
                          <p> I'm also involved in a variety of extracurriculars on campus, including UCSD Zor (UCSD's competitive bollywood dance team), CSES, and TSE. I also enjoy painting, dancing, and exploring San Diego!</p>
-                         <a href="images/Resume.pdf" class="button" download="Unnati Goyal Resume">Download Resume</a>
+                         <a href="images\PersonalWebsite Unnati.pdf" class="button" download="Unnati Goyal Resume">Download Resume</a>
                     </div>
                </div>
           </div>
@@ -301,35 +301,54 @@
      <section id="contact">
           <div class="section-container">
                <h2>Get in touch</h2>
-               <p>Email: ugoyal@ucsd.edu || unnatigoyal@gmail.com</p>
+               <p>Email: ugoyal@ucsd.edu || unnatigoyal2006@gmail.com</p>
                <p>...or use the following form</p>
 
+               <div data-fs-success class="form-success"></div>
+               <div data-fs-error class="form-error"></div>
+
                <form id="contact-form">
-                    <input 
-                         type="text"
-                         name="name"
-                         placeholder="Name"
-                         required>
+                    <div class="form-field">
+                         <input
+                              type="text"
+                              name="name"
+                              placeholder="Name"
+                              data-fs-field
+                              required>
+                         <span data-fs-error="name" class="field-error"></span>
+                    </div>
 
-                    <input
-                         type="email"
-                         name="email"
-                         placeholder="Email"
-                         required>
+                    <div class="form-field">
+                         <input
+                              type="email"
+                              name="email"
+                              placeholder="Email"
+                              data-fs-field
+                              required>
+                         <span data-fs-error="email" class="field-error"></span>
+                    </div>
 
-                    <input
-                         type="text"
-                         name="subject"
-                         placeholder="Subject"
-                         required>
+                    <div class="form-field form-field-full">
+                         <input
+                              type="text"
+                              name="subject"
+                              placeholder="Subject"
+                              data-fs-field
+                              required>
+                         <span data-fs-error="subject" class="field-error"></span>
+                    </div>
 
-                    <textarea
-                         name="message"
-                         placeholder="Message"
-                         rows="5"
-                         required></textarea>
+                    <div class="form-field form-field-full">
+                         <textarea
+                              name="message"
+                              placeholder="Message"
+                              rows="5"
+                              data-fs-field
+                              required></textarea>
+                         <span data-fs-error="message" class="field-error"></span>
+                    </div>
 
-                    <button type="submit">
+                    <button type="submit" data-fs-submit-btn>
                          Send Message
                     </button>
                </form>
@@ -353,7 +372,8 @@
           </div>
      </footer>
 
-     <script src="js/script.js"></script>
+     <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+     <script src="js/script.js" defer></script>
 
      </body>
 </html>

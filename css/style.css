@@ -617,13 +617,18 @@ h2 {
     background: var(--color-white);
 }
 
-#contact-form textarea {
-    grid-column: 1 / -1;
-    resize: vertical;
+.form-field {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
-#contact-form input[name="subject"] {
+.form-field-full {
     grid-column: 1 / -1;
+}
+
+.form-field textarea {
+    resize: vertical;
 }
 
 #contact-form button {
@@ -644,6 +649,52 @@ h2 {
 #contact-form button:hover {
     background: var(--color-raspberry-dark);
     transform: translateY(-2px);
+}
+
+/* ---------- Contact form feedback (Formspree) ---------- */
+.form-success,
+.form-error {
+    display: none;
+    width: 100%;
+    max-width: 640px;
+    padding: 0.9rem 1.25rem;
+    border-radius: 8px;
+    font-size: var(--fs-small);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.form-success:not(:empty) {
+    display: block;
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--color-sage-dark);
+    border: 1px solid var(--color-sage);
+}
+
+.form-error:not(:empty) {
+    display: block;
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--color-raspberry);
+    border: 1px solid var(--color-raspberry);
+}
+
+.field-error {
+    display: block;
+    width: 100%;
+    color: var(--color-raspberry);
+    font-size: var(--fs-caption);
+    font-weight: 600;
+    text-align: left;
+    min-height: 1em;
+    margin-top: -0.5rem;
+}
+
+.field-error:empty {
+    margin-top: 0;
+}
+
+[data-fs-field][aria-invalid="true"] {
+    border-color: var(--color-raspberry) !important;
 }
 
 /* ---------- Footer ---------- */
@@ -687,6 +738,18 @@ footer .icon-link:hover {
     border-color: var(--color-sage);
 }
 
+/* ---------- Scroll Fade Animation ---------- */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* ---------- Responsive ---------- */
 @media (max-width: 860px) {
     #about .about-content {
@@ -728,17 +791,5 @@ footer .icon-link:hover {
 
     .project-grid {
         grid-template-columns: 1fr;
-    }
-
-    /* ---------- Scroll Fade Animation ---------- */
-    .fade-in {
-        opacity: 0;
-        transform: translateY(30px);
-        transition: opacity 0.8s ease, transform 0.8s ease;
-    }
-
-    .fade-in.visible {
-        opacity: 1;
-        transform: translateY(0);
     }
 }
