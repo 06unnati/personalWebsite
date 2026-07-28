@@ -66,10 +66,6 @@ The form posts to a Formspree endpoint via their AJAX library (see the script ta
 2. Update the `formId` value passed to `initForm` in `js/script.js`.
 3. Confirm the notification email address in your Formspree dashboard.
 
-## Deployment
-
-Being fully static, this site can be hosted anywhere that serves plain files — GitHub Pages, Netlify, Vercel, or any web host. For GitHub Pages: push to a repo, then enable Pages in the repo settings pointing at the branch/root containing `index.html`.
-
 ## Customization notes
 
 - Colors and fonts are centralized as CSS custom properties at the top of `style.css` and in `font.css` — change a token once and it updates everywhere.
@@ -80,4 +76,4 @@ Being fully static, this site can be hosted anywhere that serves plain files —
 
 **Unnati Goyal**
 UC San Diego — Computer Science & Business Economics
-[GitHub](https://github.com/06unnati) · [LinkedIn](https://www.linkedin.com/in/unnatigoyal/)
+[GitHub](https://github.com/06unnati) · [LinkedIn](https://www.linkedin.com/in/unnati-goyal2006/)
