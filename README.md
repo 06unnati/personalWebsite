@@ -2,7 +2,7 @@
 
 A personal portfolio site built with plain HTML, CSS, and JavaScript — no frameworks, no build step. It covers an About section, Education, Experience, Projects, Extracurriculars, and a working Contact form.
 
-**Live demo (GitHub Pages):** _add your github.io URL here once deployed_
+**Live demo (GitHub Pages):** https://06unnati.github.io/personalWebsite/
 
 ## Features
 
